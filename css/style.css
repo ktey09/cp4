@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: clamp(16px, 2.5vw, 18px); /* Responsive font size */
+    line-height: 1.5;
+    color: #222; /* Darker color for improved contrast */
+    background-color: #ffffff; /* Light background for readability */
+}
+
+header,
+footer,
+nav {
+    padding: 1rem;
+    background-color: #e6e6e6; /* Slightly darker for better contrast */
+    text-align: center;
+}
+
+/* Nav bar styling */
+nav ul {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #00509e; /* Darker blue for contrast */
+    font-weight: bold; /* Increase visibility */
+    transition: color 0.3s; /* Added transition for link color */
+}
+
+nav a:hover,
+nav a:active {
+    color: #004080; /* Darker hover color */
+    text-decoration: underline;
+}
+
+/* Athlete profile image */
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+main {
+    padding: 1rem;
+}
+
+/* Scrollable table for seasonal records */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    display: block;
+}
+
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+    white-space: nowrap;
+    border-bottom: 1px solid #bbb; /* Darker border for improved visibility */
+}
+
+th {
+    position: sticky; /* Fixed header for scroll */
+    top: 0;
+    background-color: #cccccc; /* Darker header background */
+    color: #222; /* Darker text for contrast */
+    z-index: 1;
+}
+
+/* Alternating row colors for readability */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Collapsible sections for race details */
+section {
+    margin-bottom: 1rem;
+}
+
+section h2 {
+    font-size: 1.2rem;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 0.5rem;
+    color: #004080; /* Darker color for contrast */
+    transition: color 0.3s ease-in-out; /* Transition for hover and active */
+}
+
+section h2:hover,
+section h2:active {
+    color: #003366; /* Darker hover and active color */
+}
+
+/* Animations and accessibility styling */
+@media (prefers-reduced-motion: no-preference) {
+    section h2 {
+        transition: color 0.3s ease;
+    }
+}
+
+/* Collapsible details */
+.collapsible-content {
+    display: none; /* Hidden by default */
+}
+
+section.collapsible .collapsible-content {
+    display: block; /* Shown when clicked */
+}
+
+/* Athlete profile data: only show key details on mobile */
+@media (min-width: 768px) {
+    table th.hide-on-mobile,
+    table td.hide-on-mobile {
+        display: table-cell; /* Show all columns on larger screens */
+    }
+}
+
+/* Footer styling */
+footer {
+    font-size: 0.875rem;
+    color: #333; /* Darker color for footer text */
+    background-color: #e6e6e6;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Basic animations */
+a {
+    transition: color 0.3s; /* Transition for anchor links */
+}
+
+a:hover,
+a:active {
+    color: #004080; /* Darker hover and active color for links */
+}
