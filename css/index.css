@@ -118,3 +118,35 @@ li:nth-child(3n) {
         opacity: 1;
     }
 }
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #e0e0e0;
+        background-color: #121212;
+    }
+
+    header {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+
+    .mens, .womens, ul {
+        background-color: #1e1e1e;
+        border: 1px solid #555;
+        color: #e0e0e0;
+    }
+
+    a {
+        color: #81a1ff;
+    }
+
+    a:hover {
+        color: #b3d4ff;
+    }
+
+    footer {
+        background-color: #1a1a1a;
+        color: #cccccc;
+    }
+}
