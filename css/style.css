@@ -95,13 +95,6 @@ section h2:active {
     color: #003366; /* Darker hover and active color */
 }
 
-/* Animations and accessibility styling */
-@media (prefers-reduced-motion: no-preference) {
-    section h2 {
-        transition: color 0.3s ease;
-    }
-}
-
 /* Collapsible details */
 .collapsible-content {
     display: none; /* Hidden by default */
@@ -136,4 +129,12 @@ a {
 a:hover,
 a:active {
     color: #004080; /* Darker hover and active color for links */
+}
+
+/* Animations and accessibility styling */
+@media (prefers-reduced-motion: reduce) {
+    section h2 {
+        transition: none;
+        animation: none;
+    }
 }

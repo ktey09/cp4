@@ -27,6 +27,19 @@ header h1 {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mens, .womens {
+    flex: 1;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
 }
 
@@ -55,10 +68,53 @@ a:hover {
     color: #002b5a; /* Darker blue for hover */
 }
 
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+}
+
 footer {
     text-align: center;
     padding: 1rem;
     font-size: 0.875rem;
     background-color: #e0e0e0; /* Slightly darker background for contrast */
     color: #555; /* Darker gray for better readability */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+} 
+
+li {
+    margin: 0.5rem 0;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 0.5s ease-out forwards; /* Apply fade-in animation */
+}
+
+/* Add staggered animation effect */
+li:nth-child(1n) {
+    animation-delay: 0.1s;
+}
+li:nth-child(2n) {
+    animation-delay: 0.2s;
+}
+li:nth-child(3n) {
+    animation-delay: 0.3s;
+}
+/* Repeat for other list items */
+
+/* Animations and accessibility styling */
+@media (prefers-reduced-motion: reduce) {
+    li {
+        transition: none;
+        animation: none;
+        opacity: 1;
+    }
 }

@@ -40,7 +40,7 @@ def process_athlete_data(file_path):
       "comments": comments
    }    
 
-def gen_athlete_page(data, outfile):
+def gen_athlete_page(data, outfile, prev_athlete=None, next_athlete=None):
    # template 
    # Start building the HTML structure
    html_content = f'''<!DOCTYPE html>
@@ -64,8 +64,6 @@ def gen_athlete_page(data, outfile):
    <nav>
      <ul>
         <li><a href="../index.html">Home Page</a></li>
-        <li><a href="mens.html">Men's Team</a></li>
-        <li><a href="womens.html">Women's Team</a></li>
      </ul>
    </nav>
    <header>
