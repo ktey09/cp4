@@ -137,6 +137,10 @@ a:active {
         transition: none;
         animation: none;
     }
+    [data-lightbox] * {
+        transition: none;
+        animation: none;
+    }
 }
 
 /* Dark Mode Styles */
